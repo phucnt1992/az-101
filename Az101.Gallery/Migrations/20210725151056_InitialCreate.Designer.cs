@@ -18,7 +18,7 @@ namespace Az101.Gallery.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "6.0.0-preview.6.21352.1")
+                .HasAnnotation("ProductVersion", "5.0.302")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Az101.Gallery.Models.Photo", b =>

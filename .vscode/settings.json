@@ -8,5 +8,8 @@
         "**/node_modules": true,
         "**/bin": true,
         "**/obj": true
-    }
+    },
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "Az101.Gallery\\bin\\Release\\net5.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/7a13f41e-1402-4056-b6ae-dcdd12bb69c1/resourceGroups/rg-rookies-training/providers/Microsoft.Web/sites/az101rookies"
 }

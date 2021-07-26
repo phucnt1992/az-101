@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Az101.Gallery/bin/Debug/net6.0/Az101.Gallery.dll",
+            "program": "${workspaceFolder}/Az101.Gallery/bin/Debug/net5.0/Az101.Gallery.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Az101.Gallery",
             "stopAtEntry": false,
