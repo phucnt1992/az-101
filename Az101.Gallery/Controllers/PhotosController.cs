@@ -1,3 +1,4 @@
+using System.IO;
 using System;
 using System.Threading.Tasks;
 
@@ -72,7 +73,7 @@ namespace Az101.Gallery.Controllers
             }
 
             using var stream = model.File.OpenReadStream();
-            var newFileName = GenerateFileName(model.Title);
+            var newFileName = GenerateFileName(model.Title, Path.GetExtension(model.File.FileName));
 
             await storage.SaveAsync(newFileName, stream);
 
@@ -104,7 +105,7 @@ namespace Az101.Gallery.Controllers
             }
 
             var oldFileName = photoToEdit.FileName;
-            var newFileName = GenerateFileName(model.Title);
+            var newFileName = GenerateFileName(model.Title, Path.GetExtension(model.File.FileName));
 
             using var stream = model.File.OpenReadStream();
             await storage.SaveAsync(newFileName, stream);
@@ -139,7 +140,7 @@ namespace Az101.Gallery.Controllers
             return NoContent();
         }
 
-        private string GenerateFileName(string title) => $"{title}_{DateTime.UtcNow:yyyyMMddHHmmssffff}";
+        private static string GenerateFileName(string title, string ext) => $"{title}_{DateTime.UtcNow:yyyyMMddHHmmssffff}{ext}";
 
     }
 }
