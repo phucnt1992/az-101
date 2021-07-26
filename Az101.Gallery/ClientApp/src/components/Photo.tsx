@@ -97,7 +97,7 @@ class Photo extends React.PureComponent<PhotoProps> {
                 </button>
               </div>
               <div className="card-footer text-muted">
-                {moment(photo.createdAt).fromNow()}
+                {moment.utc(photo.createdAt).local().fromNow()}
               </div>
             </div>
           </div>
