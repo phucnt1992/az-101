@@ -1,19 +1,17 @@
 using System;
+
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
 using Microsoft.Extensions.Hosting;
 
 using Az101.Gallery.Infrastructure.Extensions;
-using Az101.Gallery.Infrastructure.Persistence;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+
 using Az101.Gallery.Infrastructure.HealthCheck;
+
 
 namespace Az101.Gallery
 {
@@ -84,7 +82,6 @@ namespace Az101.Gallery
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
-
             app.EnsureDependencyServices(service);
         }
 
