@@ -5,7 +5,7 @@ The Azure fundamentals course for Rookies.
 ## Prerequisite
 
 1. NodeJS >= 14
-2. .NET 5
+2. .NET 6.x
 3. Azure Subscription
 
 ## Deployment
