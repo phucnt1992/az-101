@@ -63,7 +63,12 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile",
-            "dependsOn": "clean"
+            "dependsOn": "clean",
+            "options": {
+                "env": {
+                    "NODE_OPTIONS": "--openssl-legacy-provider"
+                }
+            }
         }
     ]
 }
